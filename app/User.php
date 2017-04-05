@@ -45,4 +45,13 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany(Task::class);
     }
 
+    /**
+     * 特定ユーザの全ブックリストを取得
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function booklists()
+    {
+        return $this->hasMany(Booklist::class);
+    }
+
 }
