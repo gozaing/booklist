@@ -11,13 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('hello', function () {
-    return 'Hello!';
-});
+Route::get('/', 'BooklistController@index');
 
 // 認証ルート
 Route::get( 'auth/login',  'Auth\AuthController@getLogin');
