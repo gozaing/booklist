@@ -3,6 +3,10 @@
 @section('content')
 
     <!-- Bootstrapの定形コード… -->
+<?php foreach ($booklists as $list): ?>
+    <p><?php echo $list->title; ?></p>
+
+<?php endforeach; ?>
 
     <div class="panel-body">
         <!-- バリデーションエラーの表示 -->
