@@ -11,10 +11,17 @@ use App\Booklist;
 
 class BooklistController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, $id = null)
     {
-        // get all data
-        $booklists = DB::table('booklists')->get();
+        if ($id) {
+            $booklists = Booklist::where('id', $id)->get();
+
+        } else {
+             // get all data
+            $booklists = DB::table('booklists')->get();
+
+        }
+
 
         return view('booklists.index', [
             'booklists' => $booklists
