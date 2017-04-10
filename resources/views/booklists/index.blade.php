@@ -23,7 +23,7 @@
                         <tr>
                             <!-- リスト名 -->
                             <td class="table-text">
-                                <div>{{ $list->id. ' '. $list->title }}</div>
+                                <div><a href="{{ action('BooklistController@index', $list->id) }}">{{ $list->title }}</a></div>
                             </td>
 
                             <td>
