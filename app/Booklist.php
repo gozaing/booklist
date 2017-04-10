@@ -23,4 +23,9 @@ class Booklist extends Model
     {
         return $this->belongsTo(Booklist::class);
     }
+
+    public function book()
+    {
+        return $this->hasMany(Book::class);
+    }
 }

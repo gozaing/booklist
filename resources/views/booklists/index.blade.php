@@ -34,6 +34,14 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="panel-heading">
+                ブック
+            </div>
+            {{--@foreach ($books as $book)--}}
+                {{--{{ $book }}--}}
+            {{--@endforeach--}}
+
         </div>
     @endif
 

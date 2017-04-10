@@ -16,15 +16,20 @@ class BooklistController extends Controller
         if ($id) {
             $booklists = Booklist::where('id', $id)->get();
 
+            // TODO: booklist のid を利用して、books を取得したい
+            $books = null;
+
         } else {
              // get all data
             $booklists = DB::table('booklists')->get();
+            $books     = null;
 
         }
 
 
         return view('booklists.index', [
-            'booklists' => $booklists
+            'booklists' => $booklists,
+            'books'     => $books,
         ]);
     }
 
