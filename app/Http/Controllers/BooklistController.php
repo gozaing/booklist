@@ -8,6 +8,7 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Booklist;
+use App\Book;
 
 class BooklistController extends Controller
 {
@@ -18,6 +19,14 @@ class BooklistController extends Controller
 
             // TODO: booklist のid を利用して、books を取得したい
             $books = null;
+//            $books = Book::where('booklist_id', 1)->get();
+//            $books = Book->$booklists();
+            $booklist = Booklist::find(2);
+            $books = $booklist->book();
+
+            var_dump($booklist);
+//            var_dump($books);
+            exit();
 
         } else {
              // get all data

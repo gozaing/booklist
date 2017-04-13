@@ -38,9 +38,10 @@
             <div class="panel-heading">
                 ブック
             </div>
-            {{--@foreach ($books as $book)--}}
+            @foreach ($books as $book)
                 {{--{{ $book }}--}}
-            {{--@endforeach--}}
+                <?php var_dump($book); ?>
+            @endforeach
 
         </div>
     @endif
