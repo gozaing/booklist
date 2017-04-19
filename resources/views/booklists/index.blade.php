@@ -40,7 +40,7 @@
             </div>
             @foreach ($books as $book)
                 {{--{{ $book }}--}}
-                <?php var_dump($book); ?>
+                <?php //var_dump($book); ?>
             @endforeach
 
         </div>

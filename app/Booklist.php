@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+//use App\Book;
+
 
 class Booklist extends Model
 {
@@ -26,6 +28,8 @@ class Booklist extends Model
 
     public function book()
     {
+        // この書き方はどっちも同じで変わらない
         return $this->hasMany(Book::class);
+//        return $this->hasMany('App\Book');
     }
 }
