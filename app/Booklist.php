@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booklist extends Model
 {
-    // TODO: この複数代入するという部分が理解出来ていない
     /**
      * 複数代入する属性
      *
@@ -30,6 +29,5 @@ class Booklist extends Model
     {
         // この書き方はどっちも同じで変わらない
         return $this->hasMany(Book::class);
-//        return $this->hasMany('App\Book');
     }
 }
