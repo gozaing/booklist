@@ -15,36 +15,9 @@ class BooklistController extends Controller
     public function index(Request $request, $id = null)
     {
         if ($id) {
-//            $booklists = Booklist::where('id', $id)->get();
 
-            // TODO: booklist のid を利用して、books を取得したい
-            $books = null;
-//            $books = Book::where('booklist_id', 1)->get();
-//            $books = Book->$booklists();
-
-//            $booklist = Booklist::find(1)->book();
-//            $booklist = Booklist::find(2);
-
-            $booklists = Booklist::all();
-//            $booklists = Booklist::where('id', 1)->get();
-
-            foreach ($booklists as $booklist) {
-//                var_dump($booklist->title);
-                var_dump($booklist->id);
-                $books = $booklist->book();
-//                $books = $booklist->user();
-                var_dump($books);
-//                exit;
-                foreach ($books as $book) {
-                    var_dump($book->id);
-                }
-//                exit;
-            }
-//            $books = $booklist->book();
-
-//            var_dump($booklist);
-//            var_dump($books);
-            exit();
+            $booklists = Booklist::find($id)->first();
+            $books     = $booklists->book();
 
         } else {
              // get all data
@@ -52,7 +25,6 @@ class BooklistController extends Controller
             $books     = null;
 
         }
-
 
         return view('booklists.index', [
             'booklists' => $booklists,
