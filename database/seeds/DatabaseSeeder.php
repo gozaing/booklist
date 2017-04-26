@@ -59,7 +59,6 @@ class BookTableSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++) {
             Book::create([
-                'user_id' => 1,
                 'booklist_id' => 1,
                 'title' => 'bbb',
                 'created_at' => Carbon::today(),

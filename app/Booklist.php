@@ -25,7 +25,7 @@ class Booklist extends Model
         return $this->belongsTo(Booklist::class);
     }
 
-    public function book()
+    public function books()
     {
         // この書き方はどっちも同じで変わらない
         return $this->hasMany(Book::class);
