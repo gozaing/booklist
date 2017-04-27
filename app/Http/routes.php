@@ -29,5 +29,6 @@ Route::delete('/task/{task}', 'TaskController@destroy');
 
 // Booklist ルート
 Route::get('/booklists/{id}', 'BooklistController@index');
+Route::get('/booklists', 'BooklistController@index');
 Route::post('/booklist', 'BooklistController@store');
 Route::delete('/booklist/{booklist}', 'BooklistController@destroy');

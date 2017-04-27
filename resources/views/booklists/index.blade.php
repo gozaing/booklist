@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @if (count($booklists) > 0)
+    @if (count($booklists) > 1)
         <div class="panel panel-default">
             <div class="panel-heading">
                 ブックリスト
@@ -34,15 +34,12 @@
                     </tbody>
                 </table>
             </div>
-
+        </div>
+    @else
+        <div class="panel panel-default">
             <div class="panel-heading">
-                ブック
+                1冊の場合
             </div>
-            @foreach ($books as $book)
-                {{--{{ $book }}--}}
-                <?php //var_dump($book); ?>
-            @endforeach
-
         </div>
     @endif
 

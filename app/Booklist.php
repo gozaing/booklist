@@ -22,7 +22,7 @@ class Booklist extends Model
      */
     public function user()
     {
-        return $this->belongsTo(Booklist::class);
+        return $this->belongsTo(User::class);
     }
 
     public function books()

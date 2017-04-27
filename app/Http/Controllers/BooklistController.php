@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Book;
@@ -16,12 +14,15 @@ class BooklistController extends Controller
     {
         if ($id) {
 
-            $booklists = Booklist::find($id)->first();
-            $books     = $booklists->book();
+            // IDで指定したBooklistのみ取得
+            $booklists = Booklist::find($id);
+            // 関連する本の一覧を取得
+            $books     = $booklists->books;
 
         } else {
-             // get all data
-            $booklists = DB::table('booklists')->get();
+
+            // ID指定なしは、全県取得
+            $booklists = Booklist::get();
             $books     = null;
 
         }
