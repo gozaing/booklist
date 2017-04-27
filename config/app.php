@@ -148,6 +148,9 @@ return [
         // Forms & HTML
         Collective\Html\HtmlServiceProvider::class,
 
+        // IDE HELPER
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
     ],
 
     /*
